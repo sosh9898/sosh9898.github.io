@@ -4,7 +4,8 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- @import url('https://cdn.rawgit.com/singihae/Webfonts/master/style.css');
+ @import url('https://cdn.rawgit.com/YJSoft/Webfonts/0.1/BM_HANNA.css');
+ @import url('https://cdn.rawgit.com/YJSoft/Webfonts/0.1/BM_JUA.css');
 
 @media print {
   *,
