@@ -14,9 +14,11 @@ p {
   line-height: 1.75; }
 
 a {
-  color: #fed136; }
+  color: #fed136;
+font-family:'BM JUA','배달의민족 주아',sans-serif;}
   a.active, a:active, a:focus, a:hover {
-    color: #fec503; }
+    color: #fec503;
+  font-family:'BM JUA','배달의민족 주아',sans-serif; }
 
 h1,
 h2,
