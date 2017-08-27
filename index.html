@@ -209,8 +209,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">About</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading">개발 일기</h2>
+            <h3 class="section-subheading text-muted">이슈 발생과 트러블 슈팅</h3>
           </div>
         </div>
         <div class="row">
@@ -222,11 +222,11 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>2009-2011</h4>
-                    <h4 class="subheading">Our Humble Beginnings</h4>
+                    <h4>첫 번째</h4>
+                    <h4 class="subheading">Aws s3 / multer</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted">s3 storage 에 node.js multer 모듈을 사용하여 다중 이미지를 업로드 하는 것이 목적이었다. upload.single()로 하나의 이미지를 올려본 것이 서비스 이용 경험의 전부인지라 많이 헤매었던 것 같다. 파일의 key값이 unique 하지 않아 array() 형태로 받는 것 또한 불가능하였으나 any() 의 사용으로 해결 할 수 있었다.</p>
                   </div>
                 </div>
               </li>
@@ -236,11 +236,11 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>March 2011</h4>
-                    <h4 class="subheading">An Agency is Born</h4>
+                    <h4>두 번째</h4>
+                    <h4 class="subheading">Out Of Memory</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted">이미지 업로드 시에 자주 발생하던 이슈였다. allocation tracking 결과 bitmap이 대부분의 메모리를 차지하고 있었다. 이슈 발생의 원인은 이미지를 resizing 하기 위해 사용한 bitmap 과 multi-part 시 사용한 stream에 대한 참조를 해제하지 않아 메모리를 잡아먹던 것이었다. 객체에 대한 참조를 끊어 gc가 가능하도록하여 해결 할 수 있었다. </p>
                   </div>
                 </div>
               </li>
@@ -250,25 +250,12 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>December 2012</h4>
-                    <h4 class="subheading">Transition to Full Service</h4>
+                    <h4>세 번째</h4>
+                    <h4 class="subheading">SparseArray</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>July 2014</h4>
-                    <h4 class="subheading">Phase Two Expansion</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted">하나의 프레그먼트를 페이지 마다 재사용하는 구조의 뷰페이저를 설계하였다. 팁 등록 시에 해당 페이지의 이미지와 내용을 가져오는게 목적이었는데 뷰페이저 좌우와 현재 보여지는 뷰만을 로드하기 때문에 고민중이었다 물론 pageOffscreenPageLimit() 함수를 통해 로드되는 페이지를 늘릴 수 있으나 동일한 프레그먼트를 사용 중이기에 이 또한 옳지 않은 방법
+                    이었다. 마지막으로 택하게된 것이 바로 Map 의 성능을 높힌 SparseArray 였다. instantiateItem가 호출될 때 position 을 키로하여 프레그먼트를 담는다. 반대로 destroyItem가 호출될 때 해당 position의 값을 제거한다. 프레그먼트를 반환하는 함수를 작성하여 원하는 position의 페이지를 접근하는 것이 가능하였다.</p>
                   </div>
                 </div>
               </li>
