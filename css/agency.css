@@ -42,7 +42,7 @@ section {
     font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
-    .jua(font-family:'BM JUA','배달의민족 주아',sans-serif;) }
+    .jua (font-family:'BM JUA','배달의민족 주아',sans-serif;) }
 
 @media (min-width: 768px) {
   section {
