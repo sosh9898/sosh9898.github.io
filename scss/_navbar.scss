@@ -12,11 +12,11 @@
     color: white;
     border: 0;
     background-color: $theme-primary;
-    font-family: 'NanumBarunGothic', '나눔바른고딕', sans-serif;  font-size: 1rem;
+    font-family:'BM JUA','배달의민족 주아',sans-serif;
   }
   .navbar-brand {
     color: $theme-primary;
-    font-family: 'NanumBarunGothic', '나눔바른고딕', sans-serif;  font-size: 1rem;
+    font-family:'BM JUA','배달의민족 주아',sans-serif;
     &.active,
     &:active,
     &:focus,
@@ -32,7 +32,7 @@
         padding: 0.75em 0;
         letter-spacing: 1px;
         color: white;
-        @include heading-font;
+        font-family:'BM JUA','배달의민족 주아',sans-serif;
         &.active,
         &:hover {
           color: $theme-primary;
