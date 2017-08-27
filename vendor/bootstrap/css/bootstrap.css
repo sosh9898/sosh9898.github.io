@@ -90,7 +90,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-font-family: 'NanumBarunGothic', '나눔바른고딕', sans-serif;  font-size: 1rem;
+  font-family: 'NanumBarunGothic', '나눔바른고딕', sans-serif;  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   color: #212529;

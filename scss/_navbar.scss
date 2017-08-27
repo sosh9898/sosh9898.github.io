@@ -14,7 +14,7 @@
   }
   .navbar-brand {
     color: $theme-primary;
-    @include script-font;
+    font-family: 'NanumBarunGothic', '나눔바른고딕', sans-serif;  font-size: 1rem;
     &.active,
     &:active,
     &:focus,
