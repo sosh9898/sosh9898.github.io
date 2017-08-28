@@ -39,6 +39,9 @@ Honey Straw</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#video">시연 영상</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">주요 기능</a>
             </li>
             <li class="nav-item">
@@ -64,10 +67,24 @@ Honey Straw</a>
         <div class="intro-text">
           <div class="intro-lead-in">Honey-Tip sharing community</div>
           <div class="intro-heading">이제 '빨대' 하세요</div>
-          <a class="btn btn-xl js-scroll-trigger" href="#services">시작하기</a>
+          <a class="btn btn-xl js-scroll-trigger" href="#video">시작하기</a>
         </div>
       </div>
     </header>
+
+    <section id="video">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">시연 영상</h2>
+            <h3 class="section-subheading text-muted">This is a testing video of this app</h3>
+          </div>
+          <div class="videocontainer">
+            <video width="700" height="600" controls=""> <source src="img/ezgif.com-resize.mp4" type="video/mp4"> </video>
+            </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Services -->
     <section id="services">
@@ -186,7 +203,7 @@ Honey Straw</a>
                     <h4 class="subheading">Aws s3 / multer</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">step.1 <br/>s3 storage 에 node.js multer 모듈을 사용하여 다중 이미지를 업로드 하는 것이 목적이었다. step.2 <br/>upload.single()로 하나의 이미지를 올려본 것이 서비스 이용 경험의 전부인지라 많이 헤매었던 것 같다. 파일의 key값이 unique 하지 않아 array() 형태로 받는 것 또한 불가능한 것이 문제였다. step.3 multer 내 upload.any() 의 사용으로 키값의 영향받지 않고 이미지 배열을 받아와 해결 할 수 있었다.</p>
+                    <p class="text-muted">step.1<br/>s3 storage 에 node.js multer 모듈을 사용하여 다중 이미지를 업로드 하는 것이 목적이었다.<br/>step.2<br/>upload.single()로 하나의 이미지를 올려본 것이 서비스 이용 경험의 전부인지라 많이 헤매었던 것 같다. 파일의 key값이 unique 하지 않아 array() 형태로 받는 것 또한 불가능한 것이 문제였다.<br/>step.3<br/>multer 내 upload.any() 의 사용으로 키값의 영향받지 않고 이미지 배열을 받아와 해결 할 수 있었다.</p>
                   </div>
                 </div>
               </li>
@@ -200,7 +217,7 @@ Honey Straw</a>
                     <h4 class="subheading">Out Of Memory</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">step.1 <br/>사용자로부터 이미지를 받아 업로드하는 것이 목적이었다. step.2<br/>원인을 찾기 위해 allocation tracking을 수행한 결과 bitmap이 대부분의 메모리를 차지하고 있었다. step.3<br/>이슈 발생의 원인은 이미지를 resizing 하기 위해 사용한 bitmap 과 multi-part 시 사용한 stream에 대한 참조를 해제하지 않아 메모리를 잡아먹던 것이었다. 객체에 대한 참조를 끊어 gc가 가능하도록하여 해결 할 수 있었다. </p>
+                    <p class="text-muted">step.1<br/>사용자로부터 이미지를 받아 업로드하는 것이 목적이었다.<br/>step.2<br/>원인을 찾기 위해 allocation tracking을 수행한 결과 bitmap이 대부분의 메모리를 차지하고 있었다.<br/>step.3<br/>이슈 발생의 원인은 이미지를 resizing 하기 위해 사용한 bitmap 과 multi-part 시 사용한 stream에 대한 참조를 해제하지 않아 메모리를 잡아먹던 것이었다. 객체에 대한 참조를 끊어 gc가 가능하도록하여 해결 할 수 있었다. </p>
                   </div>
                 </div>
               </li>
@@ -214,8 +231,8 @@ Honey Straw</a>
                     <h4 class="subheading">SparseArray</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">step.1 <br/>하나의 프레그먼트를 사용하는 뷰페이저 각 페이지에 이미지와 내용을 가져오는게 목적이었다. step.2<br/>뷰페이저 좌우와 현재 보여지는 뷰만을 로드하기 때문에 고민중이었다 물론 pageOffscreenPageLimit() 함수를 통해 로드되는 페이지를 늘릴 수 있으나 동일한 프레그먼트를 사용 중이기에 이 또한 옳지 않은 방법
-                    이었다. step.3<br/>마지막으로 택하게된 것이 바로 Map 의 성능을 높힌 SparseArray 였다. instantiateItem가 호출될 때 position 을 key로하여 프레그먼트를 담는다. 반대로 destroyItem가 호출될 때 해당 position의 값을 제거한다. 프레그먼트를 반환하는 함수를 작성하여 원하는 position의 페이지를 접근하는 것이 가능하였다.</p>
+                    <p class="text-muted">step.1<br/>하나의 프레그먼트를 사용하는 뷰페이저 각 페이지에 이미지와 내용을 가져오는게 목적이었다.<br/>step.2<br/>뷰페이저 좌우와 현재 보여지는 뷰만을 로드하기 때문에 고민중이었다 물론 pageOffscreenPageLimit() 함수를 통해 로드되는 페이지를 늘릴 수 있으나 동일한 프레그먼트를 사용 중이기에 이 또한 옳지 않은 방법
+                    이었다.<br/>step.3<br/>마지막으로 택하게된 것이 바로 Map 의 성능을 높힌 SparseArray 였다. instantiateItem가 호출될 때 position 을 key로하여 프레그먼트를 담는다. 반대로 destroyItem가 호출될 때 해당 position의 값을 제거한다. 프레그먼트를 반환하는 함수를 작성하여 원하는 position의 페이지를 접근하는 것이 가능하였다.</p>
                   </div>
                 </div>
               </li>
