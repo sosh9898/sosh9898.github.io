@@ -234,12 +234,12 @@ header.masthead {
     #portfolio .portfolio-item .portfolio-caption h4 {
       margin: 0;
       text-transform: none; }
-    #portfolio .portfolio-item .portfolio-caption p {
+    /*#portfolio .portfolio-item .portfolio-caption p {
       color: #888;
       padding-top: 10px;
       margin: 0;
       font-size: 14px;
-      line-height: 1.8; }
+      line-height: 1.8; }*/
 
 #portfolio * {
   z-index: 2; }
