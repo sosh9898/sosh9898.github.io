@@ -53,6 +53,7 @@
       p {
         font-size: 16px;
         margin: 0;
+        @include heading-font;
       }
     }
   }
