@@ -40,22 +40,22 @@
         }
       }
     }
-    .portfolio-caption {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 25px;
-      text-align: center;
-      background-color: white;
-      h4 {
-        margin: 0;
-        text-transform: none;
-      }
-      p {
-        font-size: 16px;
-        margin: 0;
-        @include heading-font;
-      }
-    }
+    // .portfolio-caption {
+    //   max-width: 400px;
+    //   margin: 0 auto;
+    //   padding: 25px;
+    //   text-align: center;
+    //   background-color: white;
+    //   h4 {
+    //     margin: 0;
+    //     text-transform: none;
+    //   }
+    //   p {
+    //     font-size: 16px;
+    //     margin: 0;
+    //     @include heading-font;
+    //   }
+    // }
   }
   * {
     z-index: 2;
